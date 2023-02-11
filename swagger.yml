@@ -1,0 +1,43 @@
+# swagger.yml
+
+openapi: 3.0.0
+info:
+  title: "RP Flask REST API"
+  description: "An API about people and notes"
+  version: "1.0.0"
+
+servers:
+  - url: "/api"
+
+paths:
+  /data:
+    get:
+      operationId: "data.read_all"
+      tags:
+        - "Data"
+      summary: "Read all Data"
+      responses:
+        "200":
+          description: "Successfully read all data"
+  /data/HardwareModel:
+    get:
+      operationId: "data.read_one"
+      tags:
+        - "Data"
+      summary: "Read one person"
+      # parameters:
+      #   - $ref: "#/components/parameters/Software"
+      responses:
+        "200":
+          description: "Successfully read person"
+  /data/Headers:
+    get:
+      operationId: "data.get_headers"
+      tags:
+        - "Headers"
+      summary: "Read headers"
+      # parameters:
+      #   - $ref: "#/components/parameters/Software"
+      responses:
+        "200":
+          description: "Successfully read headers"

@@ -1,0 +1,23 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RP Flask REST API</title>
+</head>
+<body>
+    <h1>
+        Hello, World!
+    </h1>
+  <label for="cars">Choose a Title:</label>
+
+  <select id="title" name="title">
+    {% for h in HEADERS%}
+    <option value="{{ h }}">{{h}}</option>
+        {% endfor %}
+</select>
+    
+    </script>
+</body>
+</html>
